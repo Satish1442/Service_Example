@@ -1,0 +1,31 @@
+<table border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>No Of Movies</th>
+        <th>No Of Affairs</th>
+        <th>Action</th>
+    </tr>
+    @for(hero of heroes;track hero.Id)
+    {
+        <tr>
+            <td>
+                {{hero.Id}}
+            </td>
+            <td>
+                {{hero.Name}}
+            </td>
+            <td>
+                {{hero.NoOfMovies}}
+            </td>
+            <td>
+                {{hero.NoOfAffairs}}
+            </td>
+            <td>
+                <a href="#" (click)="editHero(hero)"> Edit </a>
+                <span style="width: 4px;">|</span>
+                <a href="#" (click)="deleteHero(hero)"> Delete </a>
+            </td>
+        </tr>
+    }
+</table>

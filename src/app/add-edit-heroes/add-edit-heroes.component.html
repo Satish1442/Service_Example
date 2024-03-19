@@ -1,0 +1,12 @@
+<p>Add/Edit Hero</p>
+
+<input type="text" name="Id" id="Id" [(ngModel)]="newHero.Id"><br>
+<input type="text" name="Name" id="Name" [(ngModel)]="newHero.Name"><br>
+<input type="text" name="Movies" id="Movies" [(ngModel)]="newHero.NoOfMovies"><br>
+<input type="text" name="Affairs" id="Affairs" [(ngModel)]="newHero.NoOfAffairs"><br>
+<input type="button" value="ADD" (click)="addHero()">
+<input type="button" value="Update" (click)="updatehero(newHero)">
+
+<app-heroes (OnEditHero)="editHero($event)"></app-heroes>
+
+
